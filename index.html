@@ -7,6 +7,8 @@
     <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script defer src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script defer src="js/customer-ctrl.js"></script>
 </head>
 <body>
 <header class="container">
@@ -24,7 +26,7 @@
                 <div class="form-group">
                     <label for="txt-id">Customer ID</label>
                     <input class="form-control" id="txt-id" placeholder="Eg. C001" type="text">
-                    <small class="form-text text-muted">
+                    <small class="form-text text-muted" id="helper-txt-id">
                         The Customer ID should follow the pattern CXXX; X={0-9}
                     </small>
                 </div>
@@ -54,6 +56,7 @@
                 </tr>
                 </thead>
                 <tbody>
+
                 </tbody>
                 <tfoot>
                 <tr>
@@ -86,6 +89,5 @@
 <footer>
     Copyright &copy; 2020 IJSE
 </footer>
-<script src="js/customer-ctrl.js"></script>
 </body>
 </html>

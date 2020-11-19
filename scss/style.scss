@@ -90,6 +90,24 @@ main {
   }
 }
 
+table button {
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  border: none;
+}
+table img{
+  width: 30px;
+  height: 30px;
+}
+
+.hide {
+  display: none;
+}
+.selected {
+  background: red !important;
+  
+}
 /*===============================================================================
  * Footer
  *===============================================================================*/

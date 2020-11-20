@@ -29,6 +29,11 @@ var customers = [];
 var selectedCustomer = null;
 var selectedRaw = null;
 var dd = '';
+var pageSize = -1;
+var current_page = 1;
+var row = Math.ceil($("#tbl-customers").height()/$("#tbl-customers tr").height());
+var pageCount = 0;
+var current_page =1;
 /*===============================================================================
  * Init
  *===============================================================================*/
@@ -77,6 +82,8 @@ $("#btn-save").click(function (event){
             $("#txt-id").removeClass('is-valid');
             $("#txt-name").removeClass('is-valid');
             $("#txt-address").removeClass('is-valid');
+
+            handlePagination();
 
         }else{
             selectedCustomer.name= $("#txt-name").val();
@@ -144,6 +151,7 @@ function validate(){
 
     var regExp = null;
     var validated = true;
+/*
 
     $("#txt-id").removeClass('is-valid');
     $("#txt-name").removeClass('is-valid');
@@ -169,6 +177,30 @@ function validate(){
         $("helper-txt-id").select();
         validated = false;
     }
+*/
 
     return validated;
+}
+
+function displayList(rows_per_page,page){
+    $("#tbl-customers tbody").html('');
+    page--;
+
+    let start = rows_per_page*page;
+    let end = start + rows_per_page;
+
+}
+function setUpPagination(){
+    $("#tbl-customers tbody").html('');
+
+    var pageCount = Math.ceil()
+}
+function handlePagination(){
+    var h1 = /*$("#footer").height() + $("#pagination").height() +*/ 250;
+    console.log(h1);
+    console.log($("#tbl-customers tr").height());
+
+    if($("#tbl-customers").height() > (innerHeight -h1)){
+       pageCount++;
+    }
 }

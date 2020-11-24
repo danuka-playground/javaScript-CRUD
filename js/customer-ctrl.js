@@ -82,8 +82,6 @@ $("#btn-save").click(function (event){
             $("#txt-name").removeClass('is-valid');
             $("#txt-address").removeClass('is-valid');
 
-            handlePagination();
-
         }else{
             selectedCustomer.name= $("#txt-name").val();
             selectedCustomer.address= $("#txt-address").val();
